@@ -39,8 +39,8 @@ export default function ProductTable({ products }) {
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {products.map(
-                  ({ id, title, image, category, price, released }) => (
-                    <tr key={id}>
+                  ({ id, title, image, category, price, released }, index) => (
+                    <tr key={id + index}>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           <div className="flex-shrink-0 h-10 w-10">

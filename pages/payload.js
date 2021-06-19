@@ -7,11 +7,15 @@ export default function Payload({ defaultPayload }) {
   const [payload, setPayload] = useState({});
   function readFile(e) {
     if (e.target.files?.[0]) {
-      setFile(e.target.files[0]);
+      const file = e.target.files[0];
       const reader = new FileReader();
-      reader.readAsText(e.target.files[0]);
+      reader.readAsText(file);
       reader.onload = function () {
-        console.log(reader.result.split("\n"));
+        console.log(file.name);
+        setPayload({
+          content: reader.result.split("\n"),
+          fileName: file.name,
+        });
       };
     }
   }
@@ -21,7 +25,7 @@ export default function Payload({ defaultPayload }) {
   return (
     <Fragment>
       <div className="m-4 grid grid-cols-5 items-end gap-8">
-        <div className="col-span-3">
+        <div className="col-span-4">
           <label className="block text-sm font-medium text-gray-700">
             Payload
           </label>
@@ -46,7 +50,7 @@ export default function Payload({ defaultPayload }) {
                   htmlFor="file-upload"
                   className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
                 >
-                  <span>Upload a file</span>
+                  <span>Click to Upload a file</span>
                   <input
                     id="file-upload"
                     name="file-upload"
@@ -55,7 +59,7 @@ export default function Payload({ defaultPayload }) {
                     onChange={readFile}
                   />
                 </label>
-                <p className="pl-1">or drag and drop</p>
+                {/*<p className="pl-1">or drag and drop</p>*/}
               </div>
               <p className="text-xs text-gray-500">
                 {payload.fileName
@@ -66,7 +70,6 @@ export default function Payload({ defaultPayload }) {
           </div>
         </div>
         <Button onClick={loadDefaultPayload}>Default Payload</Button>
-        <Button>Start</Button>
       </div>
       <div className={"m-4 grid grid-cols-3 gap-4"}>
         {payload.content?.map((string, index) => (

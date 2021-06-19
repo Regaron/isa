@@ -1,7 +1,6 @@
 import { Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationIcon } from "@heroicons/react/outline";
-import Image from "next/image";
 
 export default function Modal({ data, open, setOpen }) {
   const cancelButtonRef = useRef(null);
