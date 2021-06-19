@@ -74,6 +74,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## More Info
 
-The `pages/api/search` directory is the api for our app which returns only `Released` products but `SQL Injection` can be done to return other data.
+The `pages/api/search` directory is the api for our app which returns only `Released Products` but `SQL Injection` can be done to return other data.
 
 The `public/payload.txt` is the `SQL Query` used as `Default Payload` in `Payload Injection Page`.
