@@ -10,6 +10,7 @@ The app is deployed at [https://isa-three.vercel.app/](https://isa-three.vercel.
 You can start injecting in the home page by selecting from `Attack Dropdown` and pressing `Start Button`.
 
 [Payload Injection](https://isa-three.vercel.app/payload) can be accessed on [https://isa-three.vercel.app/payload](https://isa-three.vercel.app/payload) or from the `Navbar`. This page can be used to `Upload File with SQL Injection Statement` to perform the attack or `Predefined Payload` can be injected by pressing `Default Payload Button`.
+The data obtained for each `SQL Query` can be seen by clicking on the `Corresponding Card`,
 
 # For Running Locally
 
