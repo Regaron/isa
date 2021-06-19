@@ -3,7 +3,7 @@ This is Information Security and Audit Project (https://github.com/Regaron/isa.g
 
 ## Deployment
 
-The app is deployed at [https://isa-three.vercel.app/](https://isa-three.vercel.app/) where it can be tested without setting up the development environment.
+The app is deployed at [https://isa-three.vercel.app/](https://isa-three.vercel.app/) where it can be tested without setting up the local environment.
 
 ## Usage
 
