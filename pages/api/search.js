@@ -12,15 +12,14 @@ export default async function (req, res) {
   const searchString = query.term ? `%${query.term}%` : "%";
   const client = await pool.connect();
   try {
-    const { rows } = await client.query(
+    const data = await client.query(
       `SELECT *
          FROM "Product"
          WHERE title ILIKE '${searchString}' AND released=true`
     );
-    res.status(200).json(rows);
+    res.status(200).json(data.rows ?? data[0].rows);
   } catch (e) {
-    console.log(e);
-    res.status(400).json({ message: "Error" });
+    res.status(400).json(e);
   }
   client.release();
 }

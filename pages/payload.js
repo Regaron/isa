@@ -3,7 +3,7 @@ import fs from "fs";
 import Button from "../components/Button";
 import SQLInjection from "../components/SQLInjection";
 
-export default function Blind({ defaultPayload }) {
+export default function Payload({ defaultPayload }) {
   const [payload, setPayload] = useState({});
   function readFile(e) {
     if (e.target.files?.[0]) {

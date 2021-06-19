@@ -44,13 +44,15 @@ export default function ProductTable({ products }) {
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           <div className="flex-shrink-0 h-10 w-10">
-                            <Image
-                              height={40}
-                              width={40}
-                              className="rounded-full"
-                              src={image}
-                              alt=""
-                            />
+                            {image.includes("https://") && (
+                              <Image
+                                height={40}
+                                width={40}
+                                className="rounded-full"
+                                src={image}
+                                alt=""
+                              />
+                            )}
                           </div>
                           <div className="ml-4">
                             <div className="text-sm font-medium text-gray-900 w-96 whitespace-pre-line">

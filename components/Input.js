@@ -1,6 +1,6 @@
 import { SearchIcon } from "@heroicons/react/solid";
 
-export default function Input({ setTerm }) {
+export default function Input({ value, setTerm, setValue }) {
   return (
     <div className={"col-span-8"}>
       <label
@@ -19,8 +19,10 @@ export default function Input({ setTerm }) {
           type="text"
           name="price"
           id="price"
-          className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-8 pr-12 sm:text-sm border-gray-300 rounded-md"
+          className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-8 pr-12 sm:text-sm text-bold border-gray-300 rounded-md"
           placeholder="Search Products"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               setTerm(e.target.value);

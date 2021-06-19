@@ -1,5 +1,6 @@
 import "tailwindcss/tailwind.css";
 import { SWRConfig } from "swr";
+import Header from "../components/Header";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
         shouldRetryOnError: false,
       }}
     >
+      <Header />
       <Component {...pageProps} />
     </SWRConfig>
   );
