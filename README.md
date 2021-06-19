@@ -1,4 +1,5 @@
-This is Information Security and Audit Project (https://github.com/Regaron/isa.git) doing SQL injection.
+This is Information Security and Audit Project (https://github.com/Regaron/isa.git) doing SQL injection where the api returns only `Released` products but `SQL Injection` can be done to return other data.
+
 
 ## Deployment
 
@@ -28,6 +29,14 @@ npm install
 yarn install
 ```
 
+Then, enter database credentials in .env file as:
+
+`DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE`.
+
+Example:
+
+`DATABASE_URL=postgresql://ravi:076mscsk009@localhost:5432/sqlinjection`
+
 Then, run database migration:
 
 ```bash
@@ -43,17 +52,28 @@ npm run prisma generate
 yarn prisma generate
 ```
 
-Then, enter database credentials in .env file as:
+Build the project using:
 
-`DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DATABASE`.
+```bash
+npm run build
+#or
+yarn build
+```
 
-Example:
+Start the app using:
 
-`DATABASE_URL=postgresql://ravi:076mscsk009@localhost:5432/sqlinjection`
+```bash
+npm run start
+#or
+yarn start
+```
 
-Open [http://localhost:3000/api/seed](http://localhost:3000/api/seed) once with your browser to fill data into database.
+After the server starts open [http://localhost:3000/api/seed](http://localhost:3000/api/seed) once with your browser to fill data into database.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the homepage.
 
+## More Info
 
-The `pages/api/search` directory is the api for our app which returns only `Released` products. But `SQL Injection` can be done to return other data.
+The `pages/api/search` directory is the api for our app which returns only `Released` products but `SQL Injection` can be done to return other data.
+
+The `public/payload.txt` is the `SQL Query` used as `Default Payload` in `Payload Injection Page`.
