@@ -1,4 +1,4 @@
-This is Information Security and Audit Project (https://github.com/Regaron/isa.git) doing SQL injection where the api returns only `Released` products but `SQL Injection` can be done to return other data.
+This is Information Security and Audit Project (https://github.com/Regaron/isa.git) doing SQL injection where the api returns only `Released Products` but `SQL Injection` can be done to return `Other Data`.
 
 
 ## Deployment
